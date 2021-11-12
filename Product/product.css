@@ -1,0 +1,114 @@
+.app__container{
+    padding-bottom: 35px;
+    margin-bottom: 40px;
+}
+.app-product:last-child{
+    height: 450px;
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+
+.app-product__img{
+   height: 100%; 
+   width: 100%;
+}
+.app-product__title{
+   font-size: 2rem;
+   font-weight: 400;
+
+}
+.app-product-rating{
+    /* margin: 30px 10px; */
+    display: flex;
+    font-size: 1.7rem;
+}
+.app-product-rating-star{
+    padding-right: 40px;
+    cursor: pointer;
+    border-right: 1px solid var(--border-color);
+}
+.app-product-rating__number{
+    margin: 0 5px 0 40px;
+}
+.app-product-rating__text{
+    color: #7d7a76;
+}
+.app-product-price{
+    font-size: 2.6rem;
+    /* margin: 30px 0; */
+}
+.app-product-price__old{
+    text-decoration: line-through;
+    color: #7d7a76;
+    margin-right: 60px;
+}
+.app-product-price__new{
+    color: var(--primary-color);
+}
+.app-product-origin{
+    
+}
+.app-product__title{
+    color: #7d7a76;
+    font-size: 1.7rem;
+    margin-right: 15px;
+}
+.app-product__text{
+    font-size: 1.6rem;
+}
+.app-product-number{
+    display: flex;
+    align-items: center;
+}
+.app-product-number__item{
+
+}
+.app-product-number__item-minus{
+    background-color: none;
+    padding: 6px 8px;
+    font-size: 1.6rem;
+    border: 1px solid var(--border-color);
+    outline: none;
+}
+.app-product-number__item-text{
+    max-width: 50px;
+    padding: 6px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.app-product-number__item-plus{
+    background-color: none;
+    padding: 6px 8px;
+    font-size: 1.6rem;
+    border: 1px solid var(--border-color);
+    outline: none;
+    margin-right: 15px;
+}
+.app-product-buy{
+    display: flex;
+    align-items: center;
+}
+.app-product-buy__cart{
+    padding: 25px 20px;
+    background-color: #ffeee8;
+    margin-right: 30px;
+}
+.app-product-buy__cart-icon{
+    font-size: 2.3rem;
+    margin-right: 12px;
+}
+.app-product-buy__cart-text{
+    font-size: 1.6rem;
+}
+.app-product-buy-btn{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-size: 1.6rem;
+    padding: 25px 0;
+}

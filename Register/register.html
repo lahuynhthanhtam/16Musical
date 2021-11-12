@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Register</title>
+    <link rel="shortcut icon" href="https://www.vhv.rs/dpng/d/132-1322685_favicon-ico-download-free-hd-png-download.png" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/icon/fontawesome-free-5.15.3-web/fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="stylesheet" href="/assets/CSS/normalize.min.css.map">
+    <link rel="stylesheet" href="/assets/CSS/grid.css">
+    <link rel="stylesheet" href="/assets/CSS/base.css">
+    <link rel="stylesheet" href="/assets/CSS/responsive.css">
+    <link rel="stylesheet" href="/assets/Font-size/Roboto/Roboto-Italic.ttf">
+    
+    
+    <link rel="stylesheet" href="./register.css">
+</head>
+<body>
+    <div class="register">
+        <div class="main">
+            <h3 class="register__title">ĐĂNG KÝ</h3>
+          <form method="POST" action="">
+            <div class="col">
+                <div class="minput">
+                    <input type="text" id="fname" dir="auto" required>
+                    <span class="bar"></span>
+                    <label>Full Name</label>
+                </div>
+                <div class="minput">
+                    <input type="text" id="lname" dir="auto" required>
+                    <span class="bar"></span>
+                    <label>Address</label>
+                </div>
+                <div class="minput">
+                    <input type="text" id="phone" dir="auto" required>
+                    <span class="bar"></span>
+                    <label>Phone Number</label>
+                </div>
+                <div class="control-group">
+                    <span class="sex">Sex :</span>
+                    <label class="control control--radio">Male
+                        <input type="radio" name="radio" id="male" />
+                        <div class="control__indicator"></div>
+                    </label>
+                    <label class="control control--radio">Female
+                        <input type="radio" name="radio" id="femelle" />
+                        <div class="control__indicator"></div>
+                    </label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="minput">
+                    <input type="text" id="pseudo" dir="auto" required>
+    
+                    <span class="bar"></span>
+                    <label>Username</label>
+                </div>
+    
+                <div class="minput">
+                    <input type="email" id="email" dir="ltr" class="" required>
+                    <span class="bar"></span>
+                    <label>Email</label>
+                </div>
+    
+                <div class="minput">
+                    <input type="password" id="password"  dir="auto" required>
+                    <span class="bar"></span>
+                    <label>Password</label>
+                </div>
+    
+                <div class="minput">
+                    <input type="password" id="passwordConf" required>
+                    <span class="bar"></span>
+                    <label>Retype Password</label>
+                </div>
+    
+                <div class="minput">
+                  <span id="valid" style="margin-bottom: 5px; font-size:1.6rem; color: var(--white-color)">Valid fields : 0/8</span>
+                    <div class= "minput-btn">
+                      <input type="submit" id="send" value="Submit" disabled="true" style="padding:5px;padding-top:7px;">
+                      <a class= 'btn btn-back' href="http://127.0.0.1:5500/#my-register">TRỞ LẠI</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+<script src="./register.js"></script>
+</body>
+</html>

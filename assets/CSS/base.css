@@ -1,0 +1,243 @@
+/* Repair project */
+:root{
+    --primary-color: #EE4D2D;
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color: #dbdbdb ;
+    --star-gold-color: #FFCE3E;
+    --header-height: 120px;
+    --navbar-height: 34px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+    --header-sort-bar-height: 46px;
+    --header-height-search-mobile: 46px;
+}
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+    line-height: 1.6 rem;
+    font-family: 'roboto', sans-serif;
+    box-sizing: border-box;
+}
+/* Responsive */
+.grid__row{
+    display:flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+/* Test */
+.grid__column-2{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.6667%;
+}
+.grid__column-2-4{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+.grid__column-10{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3333%;
+}
+/* Modal */
+.modal{
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: fadeIn linear 0.1s;
+    z-index: 1;
+    display: none;
+}
+.modal__overlay{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal__overlay-close{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+}
+.modal__body{
+    --growth-from: 0.7;
+    --growth-to: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: auto;
+    border: 1px solid #d3d3d3;
+    animation: growth linear 0.1s;
+    z-index: 1;
+}
+/* Button style */
+.btn{
+    min-width: 124px;
+    height: 34px;
+    border: none;
+    text-decoration: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.6rem;
+    outline: none;
+    color: var(--text-color);
+    background-color: var(--white-color);
+    padding: 0 12px;
+}
+.btn.btn--nomal:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+.btn.btn--primary{
+    margin-right: 12px;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+.btn--disabled{
+    color: #949494;
+    cursor: default;
+}
+/* Selector */
+.select-input{
+    position: relative;
+    height: 34px;
+    min-width: 200px;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2px;
+    padding: 0px 12px;
+}
+.select-input__lable{
+    font-size: 1.5rem;
+}
+.select-input__icon{
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+.select-input__list{
+    position: absolute;
+    top: 36px;
+    left: 0;
+    right: 0;
+    background-color: var(--white-color);
+    border-radius: 2px;
+    list-style: none; 
+    display: none;
+    padding: 8px 12px;
+    z-index: 1;
+}
+.select-input__link{
+    font-size: 1.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+    padding: 10px 0;
+}
+.select-input__link:hover{
+    color: var(--primary-color);
+}
+.select-input:hover .select-input__list{
+    display: block;
+}
+/* Pagination */
+.pagination{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagination-item{
+    font-size: 2.0rem;
+    font-weight: 100;
+    margin: 0 16px;
+}
+.pagination-item.pagination-item--active a{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+.pagination-item.pagination-item--active:hover{
+    opacity: 80%;
+}
+.pagination-item__link{
+    --height: 30px;
+    color: #939393;
+    text-decoration: none;
+    min-width: 40px;
+    display: block;
+    text-align: center;
+    height: var(--height);
+    line-height: var(--height);
+    border-radius: 2px;
+}
+
+/* Cầu Nối 2 khối */
+.select-input__list::before,
+.header__navbar-user-menu::before,
+.header__search-option::before,
+.header__notify::before,
+.header__qr::before {
+    position: absolute;
+    top: -16px;
+    width: 100%;
+    height: 30px;
+    content:"";
+    display: block;
+}
+/* Lớp giả làm tam giác nhô lên */
+.header__navbar-user-menu::after,
+.header__cart-list::after{
+    cursor: pointer;
+    content: "";
+    position: absolute;
+    border-style: solid;
+    right: 0px;
+    top: -30px;
+    border-color: transparent transparent var(--white-color) transparent;
+    border-width: 18px 26px;
+}
+/* Amination */
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+/* Làm cho khung lớn dần lên từ 1 gốc */
+@keyframes headerNotifyGrowth{
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes growth{
+    from {
+        transform: scale(var(--growth-from))
+    }
+    to {
+        transform: scale(var(--growth-to))
+    }
+}

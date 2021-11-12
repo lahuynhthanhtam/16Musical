@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="shortcut icon" href="https://www.vhv.rs/dpng/d/132-1322685_favicon-ico-download-free-hd-png-download.png" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/icon/fontawesome-free-5.15.3-web/fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="stylesheet" href="/assets/CSS/normalize.min.css.map">
+    <link rel="stylesheet" href="/assets/CSS/grid.css">
+    <link rel="stylesheet" href="/assets/CSS/base.css">
+    <link rel="stylesheet" href="/assets/CSS/main.css">
+    <link rel="stylesheet" href="/assets/CSS/responsive.css">
+    <link rel="stylesheet" href="/assets/Font-size/Roboto/Roboto-Italic.ttf">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="/Product/product.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header" id="header">
+            <script>
+                $(function(){
+                    $('#header').load('/component/header.html');
+                })
+            </script>
+        </header>
+
+        <!-- Product -->
+        <div class="app__container" >
+           <div class="grid wide">
+               <div class="row app--content">
+                   <div class="col l-5 app-product">
+                       <img class= 'app-product__img' src="/assets/img/guitar1.jpg" alt="guitar">
+                   </div>
+                   <div class="col l-7 app-product">
+                        <h3 class="app-product__title">Đàn Guitar số 1 Việt Nam có tuổi thọ cao, phon cách châu Âu đầy lịch lãm, phong cách sống động trẻ trung</h3>
+                        <div class="app-product-rating">
+                            <div class="app-product-rating-star">
+                                <i class="app-product-item__star fas fa-star"></i>
+                                <i class="app-product-item__star fas fa-star"></i>
+                                <i class="app-product-item__star fas fa-star"></i>
+                                <i class="app-product-item__star fas fa-star"></i>
+                                <i class="app-product-item__star fas fa-star"></i>
+                            </div>
+                            <span class="app-product-rating__number">88</span>
+                            <span class="app-product-rating__text">Đã Bán</span>
+                        </div>
+                        <div class="app-product-price">
+                            <span class="app-product-price__old">209,000đ</span>
+                            <span class="app-product-price__new">92,000đ</span>
+                        </div>
+                       <div class="app-product-origin">
+                           <span class="app-product__title">Xuất Xứ:</span>
+                           <span class="app-product__text">Hàn Quốc</span>
+                       </div>
+                       <div class="app-product-number">
+                            <span class="app-product__title">Số Lượng:</span>
+                            <div class="app-product-number__item">
+                                <button class="app-product-number__item-minus">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <input type="text" class="app-product-number__item-text">
+                                <button class="app-product-number__item-plus">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <span class="app-product__text">701 Sản phẩm có sẵn</span>
+                       </div>
+                       <div class="app-product-buy">
+                           <button class="btn app-product-buy__cart">
+                                <i class="app-product-buy__cart-icon fas fa-cart-plus"></i>
+                                <span class="app-product-buy__cart-text">Thêm vào giỏ hàng</span>
+                           </button>
+                           <button class="btn app-product-buy-btn">Mua Ngay</button>
+                       </div>
+                    </div>
+               </div>
+           </div>
+        </div>
+
+        <!-- Comment Facebook -->
+        <footer class="footer" id="footer">
+            <script>
+                $(function() {
+                    $('#footer').load('/component/footer.html')
+                })
+            </script>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,274 @@
+.register{
+    background: url('/assets/img/guitar1.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+}
+.register::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+}
+.btn-back{
+    background-color: #3b7e87;
+    color: var(--white-color);
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+/* .register__img{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 60%;
+} */
+.main{
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    z-index: 999;
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html,
+body {
+    margin: 0 auto;
+    min-height: 100%;
+    font-family: 'Yanone Kaffeesatz', Consolas;
+}
+
+.register__title{
+    position: absolute;
+    margin: 40px auto;
+    padding: 10px;
+    width: 260px;
+    border: 3px dashed #3FC380;
+    color: var(--white-color);
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+form {
+    /* position: absolute;
+    left: 20%; */
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.col {
+    width: 400px;
+    min-width: 300px;
+}
+
+.minput-btn{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+form .minput {
+    position: relative;
+    top: 40%;
+    margin: 26px 10px;
+    width: 90%;
+    max-width: 400px;
+}
+
+.minput input {
+    font-size: 20px;
+    padding: 8px 4px;
+    display: block;
+    width: 100%;
+    border: none;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    -webkit-border-radius: 2px 0 0 2px;
+    -moz-border-radius: 2px 0 0 2px;
+    border-radius: 2px 0 0 2px;
+    border-bottom: 1px solid #dadada;
+}
+
+.minput input:focus {
+    outline: none;
+}
+
+.minput label {
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: -2px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+textarea:focus ~ label,
+textarea:valid ~ label,
+input:focus ~ label,
+input:valid ~ label,
+.up ~ label {
+    top: -19px;
+    font-size: 18px;
+    color: #cdcdcd;
+}
+
+.bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.bar:before,
+.bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    background-color: #afafaf;
+    position: absolute;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+input:focus ~ .bar:before,
+input:focus ~ .bar:after {
+    width: 50%;
+}
+
+input[type=submit] {
+    cursor: pointer;
+    background-color: #1ABC9C;
+    color: white;
+    border-radius: 3px;
+    border: none;
+    max-width: 125px;
+}
+
+input:disabled {
+    background: #3B7E87;
+    cursor: not-allowed;
+}
+
+
+/* Button radio/checkbox/select */
+
+.control {
+    display: block;
+    position: relative;
+    top: 0%;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--tex-color);
+    margin: 6px 10px;
+}
+.control-group{
+  position: absolute;
+  top: 100%;
+  color: var(--white-color);
+}
+.sex {
+    margin: 26px 10px;
+    font-size: 20px;
+    color: var(--tex-color);
+    
+}
+
+.control input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+label.control--radio {
+    width: 80px;
+}
+
+.control__indicator {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: #afafaf;
+}
+
+.control--radio .control__indicator {
+    border-radius: 50%;
+}
+
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+    background: #ccc;
+}
+
+.control input:checked ~ .control__indicator {
+    background: #66CC99;
+}
+
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+    background: #66CC99;
+}
+
+.control input:disabled ~ .control__indicator {
+    background: #e6e6e6;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.control__indicator:after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.control input:checked ~ .control__indicator:after {
+    display: block;
+}
+
+.control--radio .control__indicator:after {
+    left: 7px;
+    top: 7px;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.control--radio input:disabled ~ .control__indicator:after {
+    background: #7b7b7b;
+}
