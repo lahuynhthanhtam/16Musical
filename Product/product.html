@@ -14,10 +14,14 @@
     <link rel="stylesheet" href="/assets/CSS/responsive.css">
     <link rel="stylesheet" href="/assets/Font-size/Roboto/Roboto-Italic.ttf">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
+    <script src="/Product/product.js"></script>
     <link rel="stylesheet" href="/Product/product.css">
 </head>
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v12.0" nonce="R5ubOujz"></script>
 <body>
+    <script src="/Product/product.js"></script>
     <div class="app">
         <header class="header" id="header">
             <script>
@@ -58,10 +62,10 @@
                        <div class="app-product-number">
                             <span class="app-product__title">Số Lượng:</span>
                             <div class="app-product-number__item">
-                                <button class="app-product-number__item-minus">
+                                <button class="app-product-number__item-minus " id = 'gl'>
                                     <i class="fas fa-minus"></i>
                                 </button>
-                                <input type="text" class="app-product-number__item-text">
+                                <input type="text" class="app-product-number__item-text" value="1">
                                 <button class="app-product-number__item-plus">
                                     <i class="fas fa-plus"></i>
                                 </button>
@@ -81,6 +85,17 @@
         </div>
 
         <!-- Comment Facebook -->
+        <div class="app__comment">
+            <div class="grid wide">
+                <div class="row app--comment">
+                    <div class="col l-12 app-comment">
+                        <div class="app-comment__title">Bình luận</div>
+                        <div class="fb-comments" data-href="https://github.com/lahuynhthanhtam/16Musical.github.io.git" data-width="800" data-numposts="10"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <footer class="footer" id="footer">
             <script>
                 $(function() {
@@ -88,6 +103,6 @@
                 })
             </script>
         </footer>
-    </div>
+    </div> 
 </body>
 </html>
